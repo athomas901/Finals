@@ -2,6 +2,9 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { fetchProductById } from "./apis"; // Import your API function
 import { Box, Typography, Button, CircularProgress, Card, CardMedia, CardContent } from '@mui/material';
+import TopNav from "./TopNav";
+
+
 
 function ProductDetails() {
   const { id } = useParams();
@@ -25,6 +28,8 @@ function ProductDetails() {
   }, [id]);
 
   return (
+    <div>
+        <TopNav />
     <Box 
       display="flex" 
       justifyContent="center" 
@@ -74,6 +79,7 @@ function ProductDetails() {
         )}
       </Card>
     </Box>
+    </div>
   );
 }
 

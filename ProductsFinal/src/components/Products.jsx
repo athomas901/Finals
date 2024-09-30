@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { fetchProducts } from "./apis"; // Import API function
 import { Box, Typography, Card, CardMedia, CardContent, CircularProgress } from '@mui/material';
+import TopNav from "./TopNav";
+ 
+
 
 function Products() {
   const [products, setProducts] = useState([]);
@@ -22,6 +25,8 @@ function Products() {
     getProducts();
   }, []);
   return (
+    <div>
+        <TopNav />
     <Box padding={3}>
       <Typography variant="h4" gutterBottom>
        Trendy Treasures
@@ -63,8 +68,9 @@ function Products() {
             </Box>
           ))}
         </Box>
-      )}
+       )}
     </Box>
+    </div>
   );
 }
 export default Products;

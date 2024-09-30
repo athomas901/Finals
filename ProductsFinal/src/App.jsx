@@ -3,12 +3,11 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Products from "./components/Products";
 import ProductDetails from "./components/ProductDetails";
-import TopNav from "./components/TopNav"; 
 
 function App() {
   return (
     <div>
-      <TopNav /> 
+      
       <main>
         <Routes>
           <Route exact path="/" element={<Home />} />
