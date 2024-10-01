@@ -19,7 +19,7 @@ export default function TopNav() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" sx={{ backgroundColor: "#FF00FF" }}>
         <Toolbar>
           <IconButton
             edge="start"
